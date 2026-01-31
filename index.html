@@ -4,80 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEFF - South Eastern Fight Fitness</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'seff-orange': '#FA6D10',
-                        'seff-dark': '#0a0a0a',
-                        'seff-gray': '#1a1a1a',
-                    },
-                    fontFamily: {
-                        'display': ['Bebas Neue', 'sans-serif'],
-                        'body': ['Oswald', 'sans-serif'],
-                    },
-                    animation: {
-                        'slide-up': 'slideUp 0.6s ease-out forwards',
-                        'fade-in': 'fadeIn 0.8s ease-out forwards',
-                        'bounce-slow': 'bounce 3s infinite',
-                    },
-                    keyframes: {
-                        slideUp: {
-                            '0%': { transform: 'translateY(50px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        },
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script> -->
-    <!-- <style>
-        body {
-            background-color: #0a0a0a;
-        }
-        
-        .grain {
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
-        }
-
-        .diagonal-split {
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        }
-
-        .text-outline {
-            text-shadow: -2px -2px 0 #FA6D10, 2px -2px 0 #FA6D10, -2px 2px 0 #FA6D10, 2px 2px 0 #FA6D10;
-        }
-
-        .hover-lift {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .hover-lift:hover {
-            transform: translateY(-8px) rotate(-1deg);
-            box-shadow: 0 20px 40px rgba(250, 109, 16, 0.3);
-        }
-
-        nav {
-            backdrop-filter: blur(10px);
-        }
-
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        .stagger-5 { animation-delay: 0.5s; }
-        .stagger-6 { animation-delay: 0.6s; }
-    </style> -->
 </head>
 <body class="font-body text-white">
 
@@ -322,8 +252,8 @@
                     <div>
                         <h3 class="font-display text-3xl text-seff-orange mb-4">LOCATION</h3>
                         <p class="text-xl text-gray-300">
-                            Sale, Victoria<br>
-                            Australia
+                            1/327 Raglan Street, Sale<br>
+                            Victoria, Australia
                         </p>
                     </div>
 
@@ -331,12 +261,12 @@
                         <h3 class="font-display text-3xl text-seff-orange mb-4">FOLLOW US</h3>
                         <div class="space-y-3">
                             <a href="https://www.instagram.com/seff_sale/" target="_blank" 
-                               class="flex items-center gap-3 text-xl hover:text-seff-orange transition-colors group">
+                                class="flex items-center gap-3 text-xl hover:text-seff-orange transition-colors group">
                                 <img src="./assets/instagram.svg" alt="Instagram" class="h-8 w-8 group-hover:scale-110 transition-transform">
                                 <span>@seff_sale</span>
                             </a>
                             <a href="https://www.facebook.com/seffsale" target="_blank" 
-                               class="flex items-center gap-3 text-xl hover:text-seff-orange transition-colors group">
+                                class="flex items-center gap-3 text-xl hover:text-seff-orange transition-colors group">
                                 <img src="./assets/facebook.svg" alt="Facebook" class="h-8 w-8 group-hover:scale-110 transition-transform">
                                 <span>Seff Sale</span>
                             </a>
@@ -355,17 +285,17 @@
                 <!-- Contact Form -->
                 <div class="bg-seff-gray p-8 border-2 border-seff-orange/30">
                     <h3 class="font-display text-3xl mb-6">SEND A MESSAGE</h3>
-                    <form class="space-y-4">
-                        <input type="text" placeholder="Your Name" required
-                               class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
-                        <input type="email" placeholder="Email Address" required
-                               class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
-                        <input type="tel" placeholder="Phone Number"
-                               class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
-                        <textarea placeholder="Your Message" rows="5" required
-                                  class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors resize-none text-white"></textarea>
+                    <form class="space-y-4" name="contact_us">
+                        <input type="text" placeholder="Your Name" name="name" required
+                            class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
+                        <input type="email" placeholder="Email Address" name="email" required
+                            class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
+                        <input type="tel" placeholder="Phone Number" name="phone_number"
+                            class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
+                        <textarea placeholder="Your Message" rows="5" name="message" required
+                            class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors resize-none text-white"></textarea>
                         <button type="submit" 
-                                class="w-full bg-seff-orange text-seff-dark px-8 py-4 font-display text-2xl tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105">
+                            class="w-full bg-seff-orange text-seff-dark px-8 py-4 font-display text-2xl tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105">
                             SEND MESSAGE
                         </button>
                     </form>
@@ -378,7 +308,7 @@
     <footer class="bg-seff-dark border-t-2 border-seff-orange py-8">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="text-gray-500">&copy; 2026 South Eastern Fight Fitness. All rights reserved.</p>
-            <p class="text-gray-600 text-sm mt-2">Sale, Victoria, Australia</p>
+            <p class="text-gray-600 text-sm mt-2">1/327 Raglan Street, Sale, Victoria</p>
         </div>
     </footer>
 
