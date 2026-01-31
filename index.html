@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEFF - South Eastern Fight Fitness</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'seff-orange': '#FA6D10',
+                        'seff-dark': '#0a0a0a',
+                        'seff-gray': '#1a1a1a',
+                    },
+                    fontFamily: {
+                        'display': ['Bebas Neue', 'sans-serif'],
+                        'body': ['Oswald', 'sans-serif'],
+                    },
+                    animation: {
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    keyframes: {
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script> -->
+    <!-- <style>
+        body {
+            background-color: #0a0a0a;
+        }
+        
+        .grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .diagonal-split {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .text-outline {
+            text-shadow: -2px -2px 0 #FA6D10, 2px -2px 0 #FA6D10, -2px 2px 0 #FA6D10, 2px 2px 0 #FA6D10;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-8px) rotate(-1deg);
+            box-shadow: 0 20px 40px rgba(250, 109, 16, 0.3);
+        }
+
+        nav {
+            backdrop-filter: blur(10px);
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+    </style> -->
+</head>
+<body class="font-body text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-seff-dark/90 border-b-2 border-seff-orange">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <img src="./assets/seff_logo.jpg" alt="SEFF Logo" class="h-16 w-16 rounded-full border-2 border-seff-orange">
+                    <div>
+                        <h1 class="font-display text-4xl text-seff-orange tracking-wider">SEFF</h1>
+                        <p class="text-xs tracking-widest uppercase">South Eastern Fight Fitness</p>
+                    </div>
+                </div>
+                <ul class="hidden md:flex gap-8 font-display text-xl tracking-wide">
+                    <li><a href="#home" class="hover:text-seff-orange transition-colors duration-300">HOME</a></li>
+                    <li><a href="#about" class="hover:text-seff-orange transition-colors duration-300">ABOUT</a></li>
+                    <li><a href="#classes" class="hover:text-seff-orange transition-colors duration-300">CLASSES</a></li>
+                    <li><a href="#schedule" class="hover:text-seff-orange transition-colors duration-300">SCHEDULE</a></li>
+                    <li><a href="#contact" class="hover:text-seff-orange transition-colors duration-300">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-24 grain">
+        <div class="absolute inset-0 bg-gradient-to-br from-seff-orange/20 via-transparent to-transparent"></div>
+        <div class="absolute top-20 right-10 text-seff-orange/10 font-display text-[20rem] leading-none select-none">FIGHT</div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-4xl">
+                <h2 class="font-display text-8xl md:text-9xl leading-none mb-6 animate-slide-up">
+                    UNLEASH<br>
+                    <span class="text-seff-orange">YOUR WARRIOR</span>
+                </h2>
+                <p class="text-2xl md:text-3xl mb-8 tracking-wide opacity-0 animate-fade-in stagger-2">
+                    Multi-discipline combat sports training in Sale, Victoria
+                </p>
+                <div class="flex gap-4 flex-wrap opacity-0 animate-fade-in stagger-3">
+                    <a href="#contact" class="bg-seff-orange text-seff-dark px-8 py-4 font-display text-2xl tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105">
+                        JOIN NOW
+                    </a>
+                    <a href="#classes" class="border-2 border-seff-orange text-seff-orange px-8 py-4 font-display text-2xl tracking-wider hover:bg-seff-orange hover:text-seff-dark transition-all duration-300">
+                        VIEW CLASSES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-seff-gray relative diagonal-split">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-seff-orange font-display text-xl tracking-widest mb-4">WHO WE ARE</p>
+                    <h2 class="font-display text-6xl md:text-7xl mb-6 leading-tight">
+                        SALE'S PREMIER<br>
+                        <span class="text-seff-orange">FIGHT CLUB</span>
+                    </h2>
+                    <p class="text-lg leading-relaxed mb-6 text-gray-300">
+                        South Eastern Fight Fitness is your destination for world-class combat sports training. 
+                        Whether you're a complete beginner or seasoned competitor, we provide the expertise, 
+                        environment, and community to help you reach your full potential.
+                    </p>
+                    <p class="text-lg leading-relaxed text-gray-300">
+                        Train in multiple disciplines under expert coaches who are passionate about 
+                        your success. Get fit, learn self-defense, or compete at the highest level.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-seff-dark p-8 border-l-4 border-seff-orange hover-lift">
+                        <div class="text-6xl mb-4">🥊</div>
+                        <h3 class="font-display text-2xl mb-3">EXPERT COACHES</h3>
+                        <p class="text-gray-400">Experienced instructors dedicated to your growth</p>
+                    </div>
+                    <div class="bg-seff-dark p-8 border-l-4 border-seff-orange hover-lift">
+                        <div class="text-6xl mb-4">💪</div>
+                        <h3 class="font-display text-2xl mb-3">ALL LEVELS</h3>
+                        <p class="text-gray-400">From beginners to elite fighters</p>
+                    </div>
+                    <div class="bg-seff-dark p-8 border-l-4 border-seff-orange hover-lift ">
+                        <div class="text-6xl mb-4">🏆</div>
+                        <h3 class="font-display text-2xl mb-3">MULTI-DISCIPLINE</h3>
+                        <p class="text-gray-400">Diverse training across fighting styles</p>
+                    </div>
+                    <div class="bg-seff-dark p-8 border-l-4 border-seff-orange hover-lift">
+                        <div class="text-6xl mb-4">🔥</div>
+                        <h3 class="font-display text-2xl mb-3">REAL RESULTS</h3>
+                        <p class="text-gray-400">Transform your mind and body</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="py-32 bg-seff-dark relative">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-seff-orange via-white to-seff-orange"></div>
+        
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <p class="text-seff-orange font-display text-xl tracking-widest mb-4">WHAT WE OFFER</p>
+                <h2 class="font-display text-6xl md:text-7xl">
+                    OUR <span class="text-seff-orange">DISCIPLINES</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Boxing -->
+                <div class="group relative overflow-hidden bg-seff-gray border-2 border-seff-orange/30 hover:border-seff-orange transition-all duration-500">
+                    <div class="absolute inset-0 bg-seff-orange/0 group-hover:bg-seff-orange/10 transition-all duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <h3 class="font-display text-4xl mb-4 text-seff-orange">BOXING</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Master the sweet science. Develop lightning-fast hands, footwork, and ring intelligence 
+                            through traditional boxing training.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kickboxing -->
+                <div class="group relative overflow-hidden bg-seff-gray border-2 border-seff-orange/30 hover:border-seff-orange transition-all duration-500">
+                    <div class="absolute inset-0 bg-seff-orange/0 group-hover:bg-seff-orange/10 transition-all duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <h3 class="font-display text-4xl mb-4 text-seff-orange">KICKBOXING</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Explosive striking combining punches and kicks. High-intensity training perfect 
+                            for fitness and self-defense.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Muay Thai -->
+                <div class="group relative overflow-hidden bg-seff-gray border-2 border-seff-orange/30 hover:border-seff-orange transition-all duration-500">
+                    <div class="absolute inset-0 bg-seff-orange/0 group-hover:bg-seff-orange/10 transition-all duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <h3 class="font-display text-4xl mb-4 text-seff-orange">MUAY THAI</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            The art of eight limbs. Authentic Thai boxing training building devastating 
+                            strikes and unbreakable conditioning.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BJJ -->
+                <div class="group relative overflow-hidden bg-seff-gray border-2 border-seff-orange/30 hover:border-seff-orange transition-all duration-500">
+                    <div class="absolute inset-0 bg-seff-orange/0 group-hover:bg-seff-orange/10 transition-all duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <h3 class="font-display text-4xl mb-4 text-seff-orange">BRAZILIAN JIU-JITSU</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            The gentle art. Learn submission grappling, ground control, and the chess 
+                            match of positional dominance.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- MMA -->
+                <div class="group relative overflow-hidden bg-seff-gray border-2 border-seff-orange/30 hover:border-seff-orange transition-all duration-500">
+                    <div class="absolute inset-0 bg-seff-orange/0 group-hover:bg-seff-orange/10 transition-all duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <h3 class="font-display text-4xl mb-4 text-seff-orange">MMA</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Complete mixed martial arts. Combine striking, grappling, and wrestling 
+                            to become a well-rounded fighter.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Fitness -->
+                <div class="group relative overflow-hidden bg-seff-gray border-2 border-seff-orange/30 hover:border-seff-orange transition-all duration-500">
+                    <div class="absolute inset-0 bg-seff-orange/0 group-hover:bg-seff-orange/10 transition-all duration-500"></div>
+                    <div class="p-8 relative z-10">
+                        <h3 class="font-display text-4xl mb-4 text-seff-orange">FITNESS</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            High-intensity conditioning. Build strength, endurance, and fighting fitness 
+                            through combat sports training.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-32 bg-seff-gray relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-seff-orange font-display text-xl tracking-widest mb-4">WHEN WE TRAIN</p>
+                <h2 class="font-display text-6xl md:text-7xl mb-6">
+                    CLASS <span class="text-seff-orange">SCHEDULE</span>
+                </h2>
+                <p class="text-xl text-gray-300">Contact us for current class times and availability</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-seff-dark p-10 border-t-4 border-seff-orange">
+                    <h3 class="font-display text-4xl mb-8 text-seff-orange">MON - FRI</h3>
+                    <div class="space-y-4 text-lg">
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-3">
+                            <span class="text-gray-400">Morning Sessions</span>
+                            <span class="font-display text-xl">6:00 AM - 7:00 AM</span>
+                        </div>
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-3">
+                            <span class="text-gray-400">Evening Sessions</span>
+                            <span class="font-display text-xl">6:00 PM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-seff-dark p-10 border-t-4 border-seff-orange">
+                    <h3 class="font-display text-4xl mb-8 text-seff-orange">SATURDAY</h3>
+                    <div class="space-y-4 text-lg">
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-3">
+                            <span class="text-gray-400">Morning Sessions</span>
+                            <span class="font-display text-xl">9:00 AM - 11:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center text-gray-400 mt-8 italic">* Schedule subject to change. Please contact us to confirm class times.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-seff-dark relative overflow-hidden">
+        <div class="absolute top-0 right-0 text-seff-orange/5 font-display text-[15rem] leading-none select-none">SEFF</div>
+        
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <p class="text-seff-orange font-display text-xl tracking-widest mb-4">GET IN TOUCH</p>
+                <h2 class="font-display text-6xl md:text-7xl">
+                    START YOUR <span class="text-seff-orange">JOURNEY</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="font-display text-3xl text-seff-orange mb-4">LOCATION</h3>
+                        <p class="text-xl text-gray-300">
+                            Sale, Victoria<br>
+                            Australia
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-display text-3xl text-seff-orange mb-4">FOLLOW US</h3>
+                        <div class="space-y-3">
+                            <a href="https://www.instagram.com/seff_sale/" target="_blank" 
+                               class="flex items-center gap-3 text-xl hover:text-seff-orange transition-colors group">
+                                <img src="./assets/instagram.svg" alt="Instagram" class="h-8 w-8 group-hover:scale-110 transition-transform">
+                                <span>@seff_sale</span>
+                            </a>
+                            <a href="https://www.facebook.com/seffsale" target="_blank" 
+                               class="flex items-center gap-3 text-xl hover:text-seff-orange transition-colors group">
+                                <img src="./assets/facebook.svg" alt="Facebook" class="h-8 w-8 group-hover:scale-110 transition-transform">
+                                <span>Seff Sale</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-display text-3xl text-seff-orange mb-4">GET INFO</h3>
+                        <p class="text-gray-300 text-lg leading-relaxed">
+                            Contact us through social media for membership inquiries, class schedules, 
+                            and more information about our programs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-seff-gray p-8 border-2 border-seff-orange/30">
+                    <h3 class="font-display text-3xl mb-6">SEND A MESSAGE</h3>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" required
+                               class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
+                        <input type="email" placeholder="Email Address" required
+                               class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
+                        <input type="tel" placeholder="Phone Number"
+                               class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors text-white">
+                        <textarea placeholder="Your Message" rows="5" required
+                                  class="w-full px-4 py-3 bg-seff-dark border-2 border-gray-700 focus:border-seff-orange outline-none transition-colors resize-none text-white"></textarea>
+                        <button type="submit" 
+                                class="w-full bg-seff-orange text-seff-dark px-8 py-4 font-display text-2xl tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105">
+                            SEND MESSAGE
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-seff-dark border-t-2 border-seff-orange py-8">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-gray-500">&copy; 2026 South Eastern Fight Fitness. All rights reserved.</p>
+            <p class="text-gray-600 text-sm mt-2">Sale, Victoria, Australia</p>
+        </div>
+    </footer>
+
+</body>
+</html>
