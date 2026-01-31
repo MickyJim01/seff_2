@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEFF - South Eastern Fight Fitness</title>
-    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center gap-4">
-                    <img src="./assets/seff_logo.jpg" alt="SEFF Logo" class="h-16 w-16 rounded-full border-2 border-seff-orange">
+                    <img src="./assets/seff_logo.jpg" alt="SEFF Logo" class="h-16 w-16"> <!--rounded-full border-2 border-seff-orange!-->
                     <div>
                         <h1 class="font-display text-4xl text-seff-orange tracking-wider">SEFF</h1>
                         <p class="text-xs tracking-widest uppercase">South Eastern Fight Fitness</p>
@@ -40,9 +40,10 @@
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="max-w-4xl">
-                <h2 class="font-display text-8xl md:text-9xl leading-none mb-6 animate-slide-up">
-                    UNLEASH<br>
-                    <span class="text-seff-orange">YOUR WARRIOR</span>
+                <h2 class="font-display text-8xl md:text-9xl leading-none mb-6 animate-slide-up text-seff-orange">
+                    Fight For Your<br>
+                    <span class="text-white">Quality Of</span><br>
+                    Life
                 </h2>
                 <p class="text-2xl md:text-3xl mb-8 tracking-wide opacity-0 animate-fade-in stagger-2">
                     Multi-discipline combat sports training in Sale, Victoria
@@ -51,7 +52,7 @@
                     <a href="#contact" class="bg-seff-orange text-seff-dark px-8 py-4 font-display text-2xl tracking-wider hover:bg-white transition-all duration-300 transform hover:scale-105">
                         JOIN NOW
                     </a>
-                    <a href="#classes" class="border-2 border-seff-orange text-seff-orange px-8 py-4 font-display text-2xl tracking-wider hover:bg-seff-orange hover:text-seff-dark transition-all duration-300">
+                    <a href="./schedule.html" class="border-2 border-seff-orange text-seff-orange px-8 py-4 font-display text-2xl tracking-wider hover:bg-seff-orange hover:text-seff-dark transition-all duration-300">
                         VIEW CLASSES
                     </a>
                 </div>
@@ -88,7 +89,7 @@
                     <div class="bg-seff-dark p-8 border-l-4 border-seff-orange hover-lift">
                         <div class="text-6xl mb-4">💪</div>
                         <h3 class="font-display text-2xl mb-3">ALL LEVELS</h3>
-                        <p class="text-gray-400">From beginners to elite fighters</p>
+                        <p class="text-gray-400">From kids and beginners to elite fighters</p>
                     </div>
                     <div class="bg-seff-dark p-8 border-l-4 border-seff-orange hover-lift ">
                         <div class="text-6xl mb-4">🏆</div>
@@ -206,15 +207,25 @@
 
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-seff-dark p-10 border-t-4 border-seff-orange">
-                    <h3 class="font-display text-4xl mb-8 text-seff-orange">MON - FRI</h3>
+                    <h3 class="font-display text-4xl mb-8 text-seff-orange">MON - THU</h3>
                     <div class="space-y-4 text-lg">
                         <div class="flex justify-between items-center border-b border-gray-700 pb-3">
-                            <span class="text-gray-400">Morning Sessions</span>
-                            <span class="font-display text-xl">6:00 AM - 7:00 AM</span>
+                            <span class="text-gray-400">Beginners</span>
+                            <span class="font-display text-xl">5:30 PM - 6:30 PM</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-gray-700 pb-3">
-                            <span class="text-gray-400">Evening Sessions</span>
-                            <span class="font-display text-xl">6:00 PM - 8:00 PM</span>
+                            <span class="text-gray-400">Fighters</span>
+                            <span class="font-display text-xl">6:30 PM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-seff-dark p-10 border-t-4 border-seff-orange">
+                    <h3 class="font-display text-4xl mb-8 text-seff-orange">WEDNESDAY</h3>
+                    <div class="space-y-4 text-lg">
+                        <div class="flex justify-between items-center border-b border-gray-700 pb-3">
+                            <span class="text-gray-400">Teen Fighters</span>
+                            <span class="font-display text-xl">9:00 AM - 11:00 AM</span>
                         </div>
                     </div>
                 </div>
@@ -223,7 +234,7 @@
                     <h3 class="font-display text-4xl mb-8 text-seff-orange">SATURDAY</h3>
                     <div class="space-y-4 text-lg">
                         <div class="flex justify-between items-center border-b border-gray-700 pb-3">
-                            <span class="text-gray-400">Morning Sessions</span>
+                            <span class="text-gray-400">Saturday Smash</span>
                             <span class="font-display text-xl">9:00 AM - 11:00 AM</span>
                         </div>
                     </div>
